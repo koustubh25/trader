@@ -1,0 +1,1024 @@
+{
+    "metadata": {
+        "annotations": {
+            "cni.projectcalico.org/containerID": "bce7e34c71431fb189f85dd2fa7c253abbc708406e2a1d5d3da481e9cec2ee14",
+            "cni.projectcalico.org/podIP": "10.235.70.120/32",
+            "cni.projectcalico.org/podIPs": "10.235.70.120/32",
+            "istio.io/rev": "asm-1197-3",
+            "kubectl.kubernetes.io/default-container": "x-demo-kube",
+            "kubectl.kubernetes.io/default-logs-container": "x-demo-kube",
+            "kubectl.kubernetes.io/restartedAt": "2024-02-19T23:57:34Z",
+            "prometheus.io/path": "/stats/prometheus",
+            "prometheus.io/port": "15020",
+            "prometheus.io/scrape": "true",
+            "sidecar.istio.io/status": "{\"initContainers\":[\"istio-init\"],\"containers\":[\"istio-proxy\"],\"volumes\":[\"workload-socket\",\"credential-socket\",\"workload-certs\",\"istio-envoy\",\"istio-data\",\"istio-podinfo\",\"istio-token\",\"kube-ca-cert\"],\"imagePullSecrets\":null,\"revision\":\"asm-1197-3\"}"
+        },
+        "clusterName": "",
+        "creationTimestamp": "2024-03-18T22:44:57Z",
+        "generateName": "x-demo-kube-blue-699fcd46db-",
+        "labels": {
+            "app": "x-demo-kube",
+            "app.kubernetes.io/managed-by": "x",
+            "app.kubernetes.io/name": "x-demo-kube",
+            "app.kubernetes.io/version": "v1.2.1-rc.290",
+            "apps.x.anz/clusterEnv": "np",
+            "apps.x.anz/namespaceRef": "x",
+            "apps.x.anz/tier": "apps",
+            "ci_group": "X-Deployment",
+            "ci_name": "ANZx-Platform",
+            "confidentiality": "confidential",
+            "harness.io/color": "blue",
+            "harness.io/release-name": "release-30e59703-9242-3a9f-97ae-6386858fd23e",
+            "integrity": "trusted",
+            "name": "x-demo-kube",
+            "pod-template-hash": "699fcd46db",
+            "security.istio.io/tlsMode": "istio",
+            "service.istio.io/canonical-name": "x-demo-kube",
+            "service.istio.io/canonical-revision": "v1.2.1-rc.290",
+            "strategy": "bluegreen",
+            "topology.istio.io/network": "anz-x-apps-np-e1bb39-anz-cs-network-np-vpc",
+            "trustlevel": "high",
+            "version": "v1.2.1-rc.290",
+            "x-gvk": "kubernetes-apps-x-anz-com-v1alpha2",
+            "x-managed-by": "x",
+            "x-valuestream": "x",
+            "x-workspace": "x",
+            "x.anz.com/asset": "fabric"
+        },
+        "managedFields": [
+            {
+                "apiVersion": "v1",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "Raw": "eyJmOm1ldGFkYXRhIjp7ImY6YW5ub3RhdGlvbnMiOnsiZjpjbmkucHJvamVjdGNhbGljby5vcmcvY29udGFpbmVySUQiOnt9LCJmOmNuaS5wcm9qZWN0Y2FsaWNvLm9yZy9wb2RJUCI6e30sImY6Y25pLnByb2plY3RjYWxpY28ub3JnL3BvZElQcyI6e319fX0="
+                },
+                "manager": "calico",
+                "operation": "Update",
+                "subresource": "status",
+                "time": "2024-03-18T22:44:57Z"
+            },
+            {
+                "apiVersion": "v1",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "Raw": "eyJmOm1ldGFkYXRhIjp7ImY6YW5ub3RhdGlvbnMiOnsiLiI6e30sImY6a3ViZWN0bC5rdWJlcm5ldGVzLmlvL3Jlc3RhcnRlZEF0Ijp7fX0sImY6Z2VuZXJhdGVOYW1lIjp7fSwiZjpsYWJlbHMiOnsiLiI6e30sImY6YXBwIjp7fSwiZjphcHAua3ViZXJuZXRlcy5pby9tYW5hZ2VkLWJ5Ijp7fSwiZjphcHAua3ViZXJuZXRlcy5pby9uYW1lIjp7fSwiZjphcHAua3ViZXJuZXRlcy5pby92ZXJzaW9uIjp7fSwiZjphcHBzLnguYW56L2NsdXN0ZXJFbnYiOnt9LCJmOmFwcHMueC5hbnovbmFtZXNwYWNlUmVmIjp7fSwiZjphcHBzLnguYW56L3RpZXIiOnt9LCJmOmNpX2dyb3VwIjp7fSwiZjpjaV9uYW1lIjp7fSwiZjpjb25maWRlbnRpYWxpdHkiOnt9LCJmOmhhcm5lc3MuaW8vY29sb3IiOnt9LCJmOmhhcm5lc3MuaW8vcmVsZWFzZS1uYW1lIjp7fSwiZjppbnRlZ3JpdHkiOnt9LCJmOm5hbWUiOnt9LCJmOnBvZC10ZW1wbGF0ZS1oYXNoIjp7fSwiZjpzdHJhdGVneSI6e30sImY6dHJ1c3RsZXZlbCI6e30sImY6dmVyc2lvbiI6e30sImY6eC1ndmsiOnt9LCJmOngtbWFuYWdlZC1ieSI6e30sImY6eC12YWx1ZXN0cmVhbSI6e30sImY6eC13b3Jrc3BhY2UiOnt9fSwiZjpvd25lclJlZmVyZW5jZXMiOnsiLiI6e30sIms6e1widWlkXCI6XCJjMGExYjAxYS1lZWI5LTQ0ZDMtYTY2Ni0zYTI3NDg1MThlM2JcIn0iOnt9fX0sImY6c3BlYyI6eyJmOmFmZmluaXR5Ijp7Ii4iOnt9LCJmOm5vZGVBZmZpbml0eSI6eyIuIjp7fSwiZjpwcmVmZXJyZWREdXJpbmdTY2hlZHVsaW5nSWdub3JlZER1cmluZ0V4ZWN1dGlvbiI6e30sImY6cmVxdWlyZWREdXJpbmdTY2hlZHVsaW5nSWdub3JlZER1cmluZ0V4ZWN1dGlvbiI6e319LCJmOnBvZEFudGlBZmZpbml0eSI6eyIuIjp7fSwiZjpwcmVmZXJyZWREdXJpbmdTY2hlZHVsaW5nSWdub3JlZER1cmluZ0V4ZWN1dGlvbiI6e319fSwiZjphdXRvbW91bnRTZXJ2aWNlQWNjb3VudFRva2VuIjp7fSwiZjpjb250YWluZXJzIjp7Ims6e1wibmFtZVwiOlwieC1kZW1vLWt1YmVcIn0iOnsiLiI6e30sImY6ZW52Ijp7Ii4iOnt9LCJrOntcIm5hbWVcIjpcIlBPRF9FTlZJUk9OTUVOVFwifSI6eyIuIjp7fSwiZjpuYW1lIjp7fSwiZjp2YWx1ZSI6e319LCJrOntcIm5hbWVcIjpcIlBPRF9JRFwifSI6eyIuIjp7fSwiZjpuYW1lIjp7fSwiZjp2YWx1ZUZyb20iOnsiLiI6e30sImY6ZmllbGRSZWYiOnt9fX0sIms6e1wibmFtZVwiOlwiUE9EX0lQXCJ9Ijp7Ii4iOnt9LCJmOm5hbWUiOnt9LCJmOnZhbHVlRnJvbSI6eyIuIjp7fSwiZjpmaWVsZFJlZiI6e319fSwiazp7XCJuYW1lXCI6XCJQT0RfTkFNRVwifSI6eyIuIjp7fSwiZjpuYW1lIjp7fSwiZjp2YWx1ZUZyb20iOnsiLiI6e30sImY6ZmllbGRSZWYiOnt9fX0sIms6e1wibmFtZVwiOlwiUE9EX05BTUVTUEFDRVwifSI6eyIuIjp7fSwiZjpuYW1lIjp7fSwiZjp2YWx1ZUZyb20iOnsiLiI6e30sImY6ZmllbGRSZWYiOnt9fX0sIms6e1wibmFtZVwiOlwiUE9EX1ZFUlNJT05cIn0iOnsiLiI6e30sImY6bmFtZSI6e30sImY6dmFsdWVGcm9tIjp7Ii4iOnt9LCJmOmZpZWxkUmVmIjp7fX19LCJrOntcIm5hbWVcIjpcIlRaXCJ9Ijp7Ii4iOnt9LCJmOm5hbWUiOnt9LCJmOnZhbHVlIjp7fX0sIms6e1wibmFtZVwiOlwiWk9PXCJ9Ijp7Ii4iOnt9LCJmOm5hbWUiOnt9LCJmOnZhbHVlIjp7fX19LCJmOmltYWdlIjp7fSwiZjppbWFnZVB1bGxQb2xpY3kiOnt9LCJmOmxpdmVuZXNzUHJvYmUiOnsiLiI6e30sImY6ZmFpbHVyZVRocmVzaG9sZCI6e30sImY6aHR0cEdldCI6eyIuIjp7fSwiZjpwYXRoIjp7fSwiZjpwb3J0Ijp7fSwiZjpzY2hlbWUiOnt9fSwiZjppbml0aWFsRGVsYXlTZWNvbmRzIjp7fSwiZjpwZXJpb2RTZWNvbmRzIjp7fSwiZjpzdWNjZXNzVGhyZXNob2xkIjp7fSwiZjp0aW1lb3V0U2Vjb25kcyI6e319LCJmOm5hbWUiOnt9LCJmOnJlYWRpbmVzc1Byb2JlIjp7Ii4iOnt9LCJmOmZhaWx1cmVUaHJlc2hvbGQiOnt9LCJmOmh0dHBHZXQiOnsiLiI6e30sImY6cGF0aCI6e30sImY6cG9ydCI6e30sImY6c2NoZW1lIjp7fX0sImY6aW5pdGlhbERlbGF5U2Vjb25kcyI6e30sImY6cGVyaW9kU2Vjb25kcyI6e30sImY6c3VjY2Vzc1RocmVzaG9sZCI6e30sImY6dGltZW91dFNlY29uZHMiOnt9fSwiZjpyZXNvdXJjZXMiOnsiLiI6e30sImY6bGltaXRzIjp7Ii4iOnt9LCJmOm1lbW9yeSI6e319LCJmOnJlcXVlc3RzIjp7Ii4iOnt9LCJmOmNwdSI6e30sImY6bWVtb3J5Ijp7fX19LCJmOnNlY3VyaXR5Q29udGV4dCI6eyIuIjp7fSwiZjphbGxvd1ByaXZpbGVnZUVzY2FsYXRpb24iOnt9LCJmOmNhcGFiaWxpdGllcyI6eyIuIjp7fSwiZjpkcm9wIjp7fX0sImY6cHJpdmlsZWdlZCI6e30sImY6cmVhZE9ubHlSb290RmlsZXN5c3RlbSI6e30sImY6cnVuQXNHcm91cCI6e30sImY6cnVuQXNOb25Sb290Ijp7fSwiZjpydW5Bc1VzZXIiOnt9fSwiZjp0ZXJtaW5hdGlvbk1lc3NhZ2VQYXRoIjp7fSwiZjp0ZXJtaW5hdGlvbk1lc3NhZ2VQb2xpY3kiOnt9LCJmOnZvbHVtZU1vdW50cyI6eyIuIjp7fSwiazp7XCJtb3VudFBhdGhcIjpcIi9hcHAvY29uZmlnXCJ9Ijp7Ii4iOnt9LCJmOm1vdW50UGF0aCI6e30sImY6bmFtZSI6e30sImY6cmVhZE9ubHkiOnt9fX19fSwiZjpkbnNQb2xpY3kiOnt9LCJmOmVuYWJsZVNlcnZpY2VMaW5rcyI6e30sImY6bm9kZVNlbGVjdG9yIjp7fSwiZjpyZXN0YXJ0UG9saWN5Ijp7fSwiZjpzY2hlZHVsZXJOYW1lIjp7fSwiZjpzZWN1cml0eUNvbnRleHQiOnt9LCJmOnNlcnZpY2VBY2NvdW50Ijp7fSwiZjpzZXJ2aWNlQWNjb3VudE5hbWUiOnt9LCJmOnRlcm1pbmF0aW9uR3JhY2VQZXJpb2RTZWNvbmRzIjp7fSwiZjp0b3BvbG9neVNwcmVhZENvbnN0cmFpbnRzIjp7Ii4iOnt9LCJrOntcInRvcG9sb2d5S2V5XCI6XCJrdWJlcm5ldGVzLmlvL2hvc3RuYW1lXCIsXCJ3aGVuVW5zYXRpc2ZpYWJsZVwiOlwiU2NoZWR1bGVBbnl3YXlcIn0iOnsiLiI6e30sImY6bGFiZWxTZWxlY3RvciI6e30sImY6bWF4U2tldyI6e30sImY6dG9wb2xvZ3lLZXkiOnt9LCJmOndoZW5VbnNhdGlzZmlhYmxlIjp7fX0sIms6e1widG9wb2xvZ3lLZXlcIjpcInRvcG9sb2d5Lmt1YmVybmV0ZXMuaW8vem9uZVwiLFwid2hlblVuc2F0aXNmaWFibGVcIjpcIlNjaGVkdWxlQW55d2F5XCJ9Ijp7Ii4iOnt9LCJmOmxhYmVsU2VsZWN0b3IiOnt9LCJmOm1heFNrZXciOnt9LCJmOnRvcG9sb2d5S2V5Ijp7fSwiZjp3aGVuVW5zYXRpc2ZpYWJsZSI6e319fSwiZjp2b2x1bWVzIjp7Ii4iOnt9LCJrOntcIm5hbWVcIjpcIngtZGVtby1rdWJlLXQ2YmttNzRiYjRcIn0iOnsiLiI6e30sImY6Y29uZmlnTWFwIjp7Ii4iOnt9LCJmOmRlZmF1bHRNb2RlIjp7fSwiZjpuYW1lIjp7fX0sImY6bmFtZSI6e319fX19"
+                },
+                "manager": "kube-controller-manager",
+                "operation": "Update",
+                "subresource": "",
+                "time": "2024-03-18T22:44:57Z"
+            },
+            {
+                "apiVersion": "v1",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "Raw": "eyJmOnN0YXR1cyI6eyJmOmNvbmRpdGlvbnMiOnsiazp7XCJ0eXBlXCI6XCJDb250YWluZXJzUmVhZHlcIn0iOnsiLiI6e30sImY6bGFzdFByb2JlVGltZSI6e30sImY6bGFzdFRyYW5zaXRpb25UaW1lIjp7fSwiZjpzdGF0dXMiOnt9LCJmOnR5cGUiOnt9fSwiazp7XCJ0eXBlXCI6XCJJbml0aWFsaXplZFwifSI6eyIuIjp7fSwiZjpsYXN0UHJvYmVUaW1lIjp7fSwiZjpsYXN0VHJhbnNpdGlvblRpbWUiOnt9LCJmOnN0YXR1cyI6e30sImY6dHlwZSI6e319LCJrOntcInR5cGVcIjpcIlJlYWR5XCJ9Ijp7Ii4iOnt9LCJmOmxhc3RQcm9iZVRpbWUiOnt9LCJmOmxhc3RUcmFuc2l0aW9uVGltZSI6e30sImY6c3RhdHVzIjp7fSwiZjp0eXBlIjp7fX19LCJmOmNvbnRhaW5lclN0YXR1c2VzIjp7fSwiZjpob3N0SVAiOnt9LCJmOmluaXRDb250YWluZXJTdGF0dXNlcyI6e30sImY6cGhhc2UiOnt9LCJmOnBvZElQIjp7fSwiZjpwb2RJUHMiOnsiLiI6e30sIms6e1wiaXBcIjpcIjEwLjIzNS43MC4xMjBcIn0iOnsiLiI6e30sImY6aXAiOnt9fX0sImY6c3RhcnRUaW1lIjp7fX19"
+                },
+                "manager": "kubelet",
+                "operation": "Update",
+                "subresource": "status",
+                "time": "2024-03-18T22:47:57Z"
+            }
+        ],
+        "name": "x-demo-kube-blue-699fcd46db-4gnk7",
+        "namespace": "x-np",
+        "ownerReferences": [
+            {
+                "apiVersion": "apps/v1",
+                "blockOwnerDeletion": true,
+                "controller": true,
+                "kind": "ReplicaSet",
+                "name": "x-demo-kube-blue-699fcd46db",
+                "uid": "c0a1b01a-eeb9-44d3-a666-3a2748518e3b"
+            }
+        ],
+        "selfLink": "",
+        "uid": "e655b646-a98d-4740-aa5a-0755c6de9046"
+    },
+    "spec": {
+        "affinity": {
+            "nodeAffinity": {
+                "preferredDuringSchedulingIgnoredDuringExecution": [
+                    {
+                        "preference": {
+                            "matchExpressions": [
+                                {
+                                    "key": "cloud.google.com/gke-spot",
+                                    "operator": "In",
+                                    "values": [
+                                        "true"
+                                    ]
+                                }
+                            ]
+                        },
+                        "weight": 100
+                    }
+                ],
+                "requiredDuringSchedulingIgnoredDuringExecution": {
+                    "nodeSelectorTerms": [
+                        {
+                            "matchExpressions": [
+                                {
+                                    "key": "nodepool-name",
+                                    "operator": "In",
+                                    "values": [
+                                        "business-services"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "podAntiAffinity": {
+                "preferredDuringSchedulingIgnoredDuringExecution": [
+                    {
+                        "podAffinityTerm": {
+                            "labelSelector": {
+                                "matchExpressions": [
+                                    {
+                                        "key": "app",
+                                        "operator": "In",
+                                        "values": [
+                                            "x-demo-kube"
+                                        ]
+                                    }
+                                ]
+                            },
+                            "topologyKey": "kubernetes.io/hostname"
+                        },
+                        "weight": 100
+                    }
+                ]
+            }
+        },
+        "automountServiceAccountToken": true,
+        "containers": [
+            {
+                "env": [
+                    {
+                        "name": "TZ",
+                        "value": "Australia/Victoria"
+                    },
+                    {
+                        "name": "POD_ENVIRONMENT",
+                        "value": "np"
+                    },
+                    {
+                        "name": "POD_ID",
+                        "value": "",
+                        "valueFrom": {
+                            "fieldRef": {
+                                "apiVersion": "v1",
+                                "fieldPath": "metadata.uid"
+                            }
+                        }
+                    },
+                    {
+                        "name": "POD_NAME",
+                        "value": "",
+                        "valueFrom": {
+                            "fieldRef": {
+                                "apiVersion": "v1",
+                                "fieldPath": "metadata.name"
+                            }
+                        }
+                    },
+                    {
+                        "name": "POD_NAMESPACE",
+                        "value": "",
+                        "valueFrom": {
+                            "fieldRef": {
+                                "apiVersion": "v1",
+                                "fieldPath": "metadata.namespace"
+                            }
+                        }
+                    },
+                    {
+                        "name": "POD_IP",
+                        "value": "",
+                        "valueFrom": {
+                            "fieldRef": {
+                                "apiVersion": "v1",
+                                "fieldPath": "status.podIP"
+                            }
+                        }
+                    },
+                    {
+                        "name": "POD_VERSION",
+                        "value": "",
+                        "valueFrom": {
+                            "fieldRef": {
+                                "apiVersion": "v1",
+                                "fieldPath": "metadata.labels['version']"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ZOO",
+                        "value": "Healesville"
+                    }
+                ],
+                "image": "australia-southeast1-docker.pkg.dev/anz-x-xdeploy-np-38b4c8/x-demo-artfacts/x-demo-kube:v1.2.1-rc.290",
+                "imagePullPolicy": "Always",
+                "livenessProbe": {
+                    "failureThreshold": 3,
+                    "handler": {
+                        "httpGet": {
+                            "host": "",
+                            "path": "/app-health/x-demo-kube/livez",
+                            "port": 15020,
+                            "scheme": "HTTP"
+                        }
+                    },
+                    "initialDelaySeconds": 30,
+                    "periodSeconds": 30,
+                    "successThreshold": 1,
+                    "timeoutSeconds": 5
+                },
+                "name": "x-demo-kube",
+                "readinessProbe": {
+                    "failureThreshold": 5,
+                    "handler": {
+                        "httpGet": {
+                            "host": "",
+                            "path": "/app-health/x-demo-kube/readyz",
+                            "port": 15020,
+                            "scheme": "HTTP"
+                        }
+                    },
+                    "initialDelaySeconds": 20,
+                    "periodSeconds": 30,
+                    "successThreshold": 1,
+                    "timeoutSeconds": 5
+                },
+                "resources": {
+                    "limits": {
+                        "memory": "512Mi"
+                    },
+                    "requests": {
+                        "cpu": "100m",
+                        "memory": "128Mi"
+                    }
+                },
+                "securityContext": {
+                    "allowPrivilegeEscalation": false,
+                    "capabilities": {
+                        "drop": [
+                            "ALL"
+                        ]
+                    },
+                    "privileged": false,
+                    "readOnlyRootFilesystem": true,
+                    "runAsGroup": 65532,
+                    "runAsNonRoot": true,
+                    "runAsUser": 65532
+                },
+                "stdin": false,
+                "stdinOnce": false,
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "tty": false,
+                "volumeMounts": [
+                    {
+                        "mountPath": "/app/config",
+                        "name": "x-demo-kube-t6bkm74bb4",
+                        "readOnly": true,
+                        "subPath": "",
+                        "subPathExpr": ""
+                    },
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-vbzlb",
+                        "readOnly": true,
+                        "subPath": "",
+                        "subPathExpr": ""
+                    }
+                ],
+                "workingDir": ""
+            },
+            {
+                "args": [
+                    "proxy",
+                    "sidecar",
+                    "--domain",
+                    "$(POD_NAMESPACE).svc.cluster.local",
+                    "--proxyLogLevel=warning",
+                    "--proxyComponentLogLevel=misc:error",
+                    "--log_output_level=default:info",
+                    "--stsPort=15463"
+                ],
+                "env": [
+                    {
+                        "name": "JWT_POLICY",
+                        "value": "third-party-jwt"
+                    },
+                    {
+                        "name": "PILOT_CERT_PROVIDER",
+                        "value": "kubernetes"
+                    },
+                    {
+                        "name": "CA_ADDR",
+                        "value": "meshca.googleapis.com:443"
+                    },
+                    {
+                        "name": "POD_NAME",
+                        "value": "",
+                        "valueFrom": {
+                            "fieldRef": {
+                                "apiVersion": "v1",
+                                "fieldPath": "metadata.name"
+                            }
+                        }
+                    },
+                    {
+                        "name": "POD_NAMESPACE",
+                        "value": "",
+                        "valueFrom": {
+                            "fieldRef": {
+                                "apiVersion": "v1",
+                                "fieldPath": "metadata.namespace"
+                            }
+                        }
+                    },
+                    {
+                        "name": "INSTANCE_IP",
+                        "value": "",
+                        "valueFrom": {
+                            "fieldRef": {
+                                "apiVersion": "v1",
+                                "fieldPath": "status.podIP"
+                            }
+                        }
+                    },
+                    {
+                        "name": "SERVICE_ACCOUNT",
+                        "value": "",
+                        "valueFrom": {
+                            "fieldRef": {
+                                "apiVersion": "v1",
+                                "fieldPath": "spec.serviceAccountName"
+                            }
+                        }
+                    },
+                    {
+                        "name": "HOST_IP",
+                        "value": "",
+                        "valueFrom": {
+                            "fieldRef": {
+                                "apiVersion": "v1",
+                                "fieldPath": "status.hostIP"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ISTIO_CPU_LIMIT",
+                        "value": "",
+                        "valueFrom": {
+                            "resourceFieldRef": {
+                                "containerName": "",
+                                "divisor": "0",
+                                "resource": "limits.cpu"
+                            }
+                        }
+                    },
+                    {
+                        "name": "PROXY_CONFIG",
+                        "value": "{\"discoveryAddress\":\"istiod-asm-1197-3.istio-system.svc:15012\",\"tracing\":{\"stackdriver\":{\"maxNumberOfAttributes\":\"200\",\"maxNumberOfAnnotations\":\"200\",\"maxNumberOfMessageEvents\":\"200\"}},\"proxyMetadata\":{\"CA_PROVIDER\":\"GoogleCA\",\"GCE_METADATA_HOST\":\"metadata.google.internal\",\"GCP_METADATA\":\"anz-x-apps-np-e1bb39|502271793482|anz-x-apps-np-gke|australia-southeast1\",\"GKE_CLUSTER_URL\":\"https://container.googleapis.com/v1/projects/anz-x-apps-np-e1bb39/locations/australia-southeast1/clusters/anz-x-apps-np-gke\",\"PLUGINS\":\"GoogleTokenExchange\",\"USE_TOKEN_FOR_CSR\":\"true\"},\"gatewayTopology\":{\"numTrustedProxies\":2},\"meshId\":\"proj-502271793482\",\"image\":{\"imageType\":\"distroless\"}}\n"
+                    },
+                    {
+                        "name": "ISTIO_META_POD_PORTS",
+                        "value": "[\n]"
+                    },
+                    {
+                        "name": "ISTIO_META_APP_CONTAINERS",
+                        "value": "x-demo-kube"
+                    },
+                    {
+                        "name": "GOMEMLIMIT",
+                        "value": "",
+                        "valueFrom": {
+                            "resourceFieldRef": {
+                                "containerName": "",
+                                "divisor": "0",
+                                "resource": "limits.memory"
+                            }
+                        }
+                    },
+                    {
+                        "name": "GOMAXPROCS",
+                        "value": "",
+                        "valueFrom": {
+                            "resourceFieldRef": {
+                                "containerName": "",
+                                "divisor": "0",
+                                "resource": "limits.cpu"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ISTIO_META_NODE_NAME",
+                        "value": "",
+                        "valueFrom": {
+                            "fieldRef": {
+                                "apiVersion": "v1",
+                                "fieldPath": "spec.nodeName"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ISTIO_META_INTERCEPTION_MODE",
+                        "value": "REDIRECT"
+                    },
+                    {
+                        "name": "ISTIO_META_WORKLOAD_NAME",
+                        "value": "x-demo-kube-blue"
+                    },
+                    {
+                        "name": "ISTIO_META_OWNER",
+                        "value": "kubernetes://apis/apps/v1/namespaces/x-np/deployments/x-demo-kube-blue"
+                    },
+                    {
+                        "name": "ISTIO_META_MESH_ID",
+                        "value": "proj-502271793482"
+                    },
+                    {
+                        "name": "TRUST_DOMAIN",
+                        "value": "anz-x-apps-np-e1bb39.svc.id.goog"
+                    },
+                    {
+                        "name": "CA_PROVIDER",
+                        "value": "GoogleCA"
+                    },
+                    {
+                        "name": "GCE_METADATA_HOST",
+                        "value": "metadata.google.internal"
+                    },
+                    {
+                        "name": "GCP_METADATA",
+                        "value": "anz-x-apps-np-e1bb39|502271793482|anz-x-apps-np-gke|australia-southeast1"
+                    },
+                    {
+                        "name": "GKE_CLUSTER_URL",
+                        "value": "https://container.googleapis.com/v1/projects/anz-x-apps-np-e1bb39/locations/australia-southeast1/clusters/anz-x-apps-np-gke"
+                    },
+                    {
+                        "name": "PLUGINS",
+                        "value": "GoogleTokenExchange"
+                    },
+                    {
+                        "name": "USE_TOKEN_FOR_CSR",
+                        "value": "true"
+                    },
+                    {
+                        "name": "ISTIO_META_CLUSTER_ID",
+                        "value": "cn-anz-x-apps-np-e1bb39-australia-southeast1-anz-x-apps-np-gke"
+                    },
+                    {
+                        "name": "ISTIO_META_NETWORK",
+                        "value": "anz-x-apps-np-e1bb39-anz-cs-network-np-vpc"
+                    },
+                    {
+                        "name": "ISTIO_KUBE_APP_PROBERS",
+                        "value": "{\"/app-health/x-demo-kube/livez\":{\"httpGet\":{\"path\":\"/healthz\",\"port\":8082,\"scheme\":\"HTTP\"},\"timeoutSeconds\":5},\"/app-health/x-demo-kube/readyz\":{\"httpGet\":{\"path\":\"/readyz\",\"port\":8082,\"scheme\":\"HTTP\"},\"timeoutSeconds\":5}}"
+                    }
+                ],
+                "image": "gke.gcr.io/asm/proxyv2:1.19.7-asm.3-distroless",
+                "imagePullPolicy": "Always",
+                "name": "istio-proxy",
+                "ports": [
+                    {
+                        "containerPort": 15090,
+                        "hostIP": "",
+                        "hostPort": 0,
+                        "name": "http-envoy-prom",
+                        "protocol": "TCP"
+                    }
+                ],
+                "readinessProbe": {
+                    "failureThreshold": 30,
+                    "handler": {
+                        "httpGet": {
+                            "host": "",
+                            "path": "/healthz/ready",
+                            "port": 15021,
+                            "scheme": "HTTP"
+                        }
+                    },
+                    "initialDelaySeconds": 1,
+                    "periodSeconds": 2,
+                    "successThreshold": 1,
+                    "timeoutSeconds": 3
+                },
+                "resources": {
+                    "limits": {
+                        "cpu": "2",
+                        "memory": "1Gi"
+                    },
+                    "requests": {
+                        "cpu": "250m",
+                        "memory": "256Mi"
+                    }
+                },
+                "securityContext": {
+                    "allowPrivilegeEscalation": false,
+                    "capabilities": {
+                        "drop": [
+                            "ALL"
+                        ]
+                    },
+                    "privileged": false,
+                    "readOnlyRootFilesystem": true,
+                    "runAsGroup": 1337,
+                    "runAsNonRoot": true,
+                    "runAsUser": 1337
+                },
+                "stdin": false,
+                "stdinOnce": false,
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "tty": false,
+                "volumeMounts": [
+                    {
+                        "mountPath": "/var/run/secrets/workload-spiffe-uds",
+                        "name": "workload-socket",
+                        "readOnly": false,
+                        "subPath": "",
+                        "subPathExpr": ""
+                    },
+                    {
+                        "mountPath": "/var/run/secrets/credential-uds",
+                        "name": "credential-socket",
+                        "readOnly": false,
+                        "subPath": "",
+                        "subPathExpr": ""
+                    },
+                    {
+                        "mountPath": "/var/run/secrets/workload-spiffe-credentials",
+                        "name": "workload-certs",
+                        "readOnly": false,
+                        "subPath": "",
+                        "subPathExpr": ""
+                    },
+                    {
+                        "mountPath": "/var/run/secrets/istio/kubernetes",
+                        "name": "kube-ca-cert",
+                        "readOnly": false,
+                        "subPath": "",
+                        "subPathExpr": ""
+                    },
+                    {
+                        "mountPath": "/var/lib/istio/data",
+                        "name": "istio-data",
+                        "readOnly": false,
+                        "subPath": "",
+                        "subPathExpr": ""
+                    },
+                    {
+                        "mountPath": "/etc/istio/proxy",
+                        "name": "istio-envoy",
+                        "readOnly": false,
+                        "subPath": "",
+                        "subPathExpr": ""
+                    },
+                    {
+                        "mountPath": "/var/run/secrets/tokens",
+                        "name": "istio-token",
+                        "readOnly": false,
+                        "subPath": "",
+                        "subPathExpr": ""
+                    },
+                    {
+                        "mountPath": "/etc/istio/pod",
+                        "name": "istio-podinfo",
+                        "readOnly": false,
+                        "subPath": "",
+                        "subPathExpr": ""
+                    },
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-vbzlb",
+                        "readOnly": true,
+                        "subPath": "",
+                        "subPathExpr": ""
+                    }
+                ],
+                "workingDir": ""
+            }
+        ],
+        "dnsPolicy": "ClusterFirst",
+        "enableServiceLinks": true,
+        "hostIPC": false,
+        "hostNetwork": false,
+        "hostPID": false,
+        "hostname": "",
+        "initContainers": [
+            {
+                "args": [
+                    "istio-iptables",
+                    "-p",
+                    "15001",
+                    "-z",
+                    "15006",
+                    "-u",
+                    "1337",
+                    "-m",
+                    "REDIRECT",
+                    "-i",
+                    "*",
+                    "-x",
+                    "",
+                    "-b",
+                    "*",
+                    "-d",
+                    "15090,15021,15020",
+                    "--log_output_level=default:info"
+                ],
+                "env": [
+                    {
+                        "name": "CA_PROVIDER",
+                        "value": "GoogleCA"
+                    },
+                    {
+                        "name": "GCE_METADATA_HOST",
+                        "value": "metadata.google.internal"
+                    },
+                    {
+                        "name": "GCP_METADATA",
+                        "value": "anz-x-apps-np-e1bb39|502271793482|anz-x-apps-np-gke|australia-southeast1"
+                    },
+                    {
+                        "name": "GKE_CLUSTER_URL",
+                        "value": "https://container.googleapis.com/v1/projects/anz-x-apps-np-e1bb39/locations/australia-southeast1/clusters/anz-x-apps-np-gke"
+                    },
+                    {
+                        "name": "PLUGINS",
+                        "value": "GoogleTokenExchange"
+                    },
+                    {
+                        "name": "USE_TOKEN_FOR_CSR",
+                        "value": "true"
+                    }
+                ],
+                "image": "gke.gcr.io/asm/proxyv2:1.19.7-asm.3-distroless",
+                "imagePullPolicy": "Always",
+                "name": "istio-init",
+                "resources": {
+                    "limits": {
+                        "cpu": "2",
+                        "memory": "1Gi"
+                    },
+                    "requests": {
+                        "cpu": "250m",
+                        "memory": "256Mi"
+                    }
+                },
+                "securityContext": {
+                    "allowPrivilegeEscalation": false,
+                    "capabilities": {
+                        "add": [
+                            "NET_ADMIN",
+                            "NET_RAW"
+                        ],
+                        "drop": [
+                            "ALL"
+                        ]
+                    },
+                    "privileged": false,
+                    "readOnlyRootFilesystem": false,
+                    "runAsGroup": 0,
+                    "runAsNonRoot": false,
+                    "runAsUser": 0
+                },
+                "stdin": false,
+                "stdinOnce": false,
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "tty": false,
+                "volumeMounts": [
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-vbzlb",
+                        "readOnly": true,
+                        "subPath": "",
+                        "subPathExpr": ""
+                    }
+                ],
+                "workingDir": ""
+            }
+        ],
+        "nodeName": "gke-anz-x-apps-np-gk-business-service-9e2937c5-wcqv",
+        "nodeSelector": {
+            "nodepool-name": "business-services"
+        },
+        "preemptionPolicy": "PreemptLowerPriority",
+        "priority": 0,
+        "priorityClassName": "",
+        "restartPolicy": "Always",
+        "schedulerName": "default-scheduler",
+        "securityContext": {},
+        "serviceAccount": "x-demo-kube",
+        "serviceAccountName": "x-demo-kube",
+        "subdomain": "",
+        "terminationGracePeriodSeconds": 30,
+        "tolerations": [
+            {
+                "effect": "NoExecute",
+                "key": "node.kubernetes.io/not-ready",
+                "operator": "Exists",
+                "tolerationSeconds": 300,
+                "value": ""
+            },
+            {
+                "effect": "NoExecute",
+                "key": "node.kubernetes.io/unreachable",
+                "operator": "Exists",
+                "tolerationSeconds": 300,
+                "value": ""
+            }
+        ],
+        "topologySpreadConstraints": [
+            {
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "x-demo-kube"
+                    }
+                },
+                "maxSkew": 1,
+                "topologyKey": "topology.kubernetes.io/zone",
+                "whenUnsatisfiable": "ScheduleAnyway"
+            },
+            {
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "x-demo-kube"
+                    }
+                },
+                "maxSkew": 1,
+                "topologyKey": "kubernetes.io/hostname",
+                "whenUnsatisfiable": "ScheduleAnyway"
+            }
+        ],
+        "volumes": [
+            {
+                "name": "workload-socket",
+                "volumeSource": {
+                    "emptyDir": {
+                        "medium": ""
+                    }
+                }
+            },
+            {
+                "name": "credential-socket",
+                "volumeSource": {
+                    "emptyDir": {
+                        "medium": ""
+                    }
+                }
+            },
+            {
+                "name": "workload-certs",
+                "volumeSource": {
+                    "emptyDir": {
+                        "medium": ""
+                    }
+                }
+            },
+            {
+                "name": "istio-envoy",
+                "volumeSource": {
+                    "emptyDir": {
+                        "medium": "Memory"
+                    }
+                }
+            },
+            {
+                "name": "istio-data",
+                "volumeSource": {
+                    "emptyDir": {
+                        "medium": ""
+                    }
+                }
+            },
+            {
+                "name": "istio-podinfo",
+                "volumeSource": {
+                    "downwardAPI": {
+                        "defaultMode": 420,
+                        "items": [
+                            {
+                                "fieldRef": {
+                                    "apiVersion": "v1",
+                                    "fieldPath": "metadata.labels"
+                                },
+                                "path": "labels"
+                            },
+                            {
+                                "fieldRef": {
+                                    "apiVersion": "v1",
+                                    "fieldPath": "metadata.annotations"
+                                },
+                                "path": "annotations"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "name": "istio-token",
+                "volumeSource": {
+                    "projected": {
+                        "defaultMode": 420,
+                        "sources": [
+                            {
+                                "serviceAccountToken": {
+                                    "audience": "anz-x-apps-np-e1bb39.svc.id.goog",
+                                    "expirationSeconds": 43200,
+                                    "path": "istio-token"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "name": "kube-ca-cert",
+                "volumeSource": {
+                    "configMap": {
+                        "defaultMode": 420,
+                        "localObjectReference": {
+                            "name": "kube-root-ca.crt"
+                        }
+                    }
+                }
+            },
+            {
+                "name": "x-demo-kube-t6bkm74bb4",
+                "volumeSource": {
+                    "configMap": {
+                        "defaultMode": 420,
+                        "localObjectReference": {
+                            "name": "x-demo-kube-t6bkm74bb4-27"
+                        }
+                    }
+                }
+            },
+            {
+                "name": "kube-api-access-vbzlb",
+                "volumeSource": {
+                    "projected": {
+                        "defaultMode": 420,
+                        "sources": [
+                            {
+                                "serviceAccountToken": {
+                                    "audience": "",
+                                    "expirationSeconds": 3607,
+                                    "path": "token"
+                                }
+                            },
+                            {
+                                "configMap": {
+                                    "items": [
+                                        {
+                                            "key": "ca.crt",
+                                            "path": "ca.crt"
+                                        }
+                                    ],
+                                    "localObjectReference": {
+                                        "name": "kube-root-ca.crt"
+                                    }
+                                }
+                            },
+                            {
+                                "downwardAPI": {
+                                    "items": [
+                                        {
+                                            "fieldRef": {
+                                                "apiVersion": "v1",
+                                                "fieldPath": "metadata.namespace"
+                                            },
+                                            "path": "namespace"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    },
+    "status": {
+        "conditions": [
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2024-03-18T22:44:59Z",
+                "message": "",
+                "reason": "",
+                "status": "True",
+                "type": "Initialized"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2024-03-18T22:47:57Z",
+                "message": "",
+                "reason": "",
+                "status": "True",
+                "type": "Ready"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2024-03-18T22:47:57Z",
+                "message": "",
+                "reason": "",
+                "status": "True",
+                "type": "ContainersReady"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2024-03-18T22:44:57Z",
+                "message": "",
+                "reason": "",
+                "status": "True",
+                "type": "PodScheduled"
+            }
+        ],
+        "containerStatuses": [
+            {
+                "containerID": "containerd://e225fe754e32a4693f819171c99cc53a1777f92a3f404d8b41831d7b86d77611",
+                "image": "gke.gcr.io/asm/proxyv2:1.19.7-asm.3-distroless",
+                "imageID": "gke.gcr.io/asm/proxyv2@sha256:3a1da50147560a0af0fdc18a50c2ea413e8947ca4f7173b4cce43be9074e3c87",
+                "lastState": {},
+                "name": "istio-proxy",
+                "ready": true,
+                "restartCount": 0,
+                "started": true,
+                "state": {
+                    "running": {
+                        "startedAt": "2024-03-18T22:45:01Z"
+                    }
+                }
+            },
+            {
+                "containerID": "containerd://2c397ef07139cba05733f408bf0f3ed75566c6884ea54bbcdff5bd938f795cea",
+                "image": "australia-southeast1-docker.pkg.dev/anz-x-xdeploy-np-38b4c8/x-demo-artfacts/x-demo-kube:v1.2.1-rc.290",
+                "imageID": "australia-southeast1-docker.pkg.dev/anz-x-xdeploy-np-38b4c8/x-demo-artfacts/x-demo-kube@sha256:a681701365703f8816f4ff7ce9c1a6c6fca987e815600981fa734c4f3764e3bb",
+                "lastState": {
+                    "terminated": {
+                        "containerID": "containerd://766db635a24ee6e1edc9d32454481c89912e99fc24ab1b6cb62272d043f4f8a2",
+                        "exitCode": 2,
+                        "finishedAt": "2024-03-18T22:47:05Z",
+                        "message": "",
+                        "reason": "Error",
+                        "signal": 0,
+                        "startedAt": "2024-03-18T22:46:03Z"
+                    }
+                },
+                "name": "x-demo-kube",
+                "ready": true,
+                "restartCount": 2,
+                "started": true,
+                "state": {
+                    "running": {
+                        "startedAt": "2024-03-18T22:47:21Z"
+                    }
+                }
+            }
+        ],
+        "hostIP": "10.234.18.42",
+        "initContainerStatuses": [
+            {
+                "containerID": "containerd://d5cafb61f7ea737eda44505e8e1d4e635907e9119c9a705af3cdd27de2e14e83",
+                "image": "gke.gcr.io/asm/proxyv2:1.19.7-asm.3-distroless",
+                "imageID": "gke.gcr.io/asm/proxyv2@sha256:3a1da50147560a0af0fdc18a50c2ea413e8947ca4f7173b4cce43be9074e3c87",
+                "lastState": {},
+                "name": "istio-init",
+                "ready": true,
+                "restartCount": 0,
+                "state": {
+                    "terminated": {
+                        "containerID": "containerd://d5cafb61f7ea737eda44505e8e1d4e635907e9119c9a705af3cdd27de2e14e83",
+                        "exitCode": 0,
+                        "finishedAt": "2024-03-18T22:44:59Z",
+                        "message": "",
+                        "reason": "Completed",
+                        "signal": 0,
+                        "startedAt": "2024-03-18T22:44:58Z"
+                    }
+                }
+            }
+        ],
+        "message": "",
+        "nominatedNodeName": "",
+        "phase": "Running",
+        "podIP": "10.235.70.120",
+        "podIPs": [
+            {
+                "ip": "10.235.70.120"
+            }
+        ],
+        "qosClass": "Burstable",
+        "reason": "",
+        "startTime": "2024-03-18T22:44:57Z"
+    }
+}
